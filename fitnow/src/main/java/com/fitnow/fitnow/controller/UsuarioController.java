@@ -42,7 +42,7 @@ public class UsuarioController {
 	}
 	
 	@GetMapping(value="/usuarios/{idUsuario}")
-	public ResponseEntity<Object> getById(@PathVariable String idUsuario){
+	public ResponseEntity<Object> getById(@PathVariable Integer idUsuario){
 		try {
 			Usuario data = usuarioService.findById(idUsuario);
 			return new ResponseEntity<Object>(data,HttpStatus.OK);
@@ -68,7 +68,7 @@ public class UsuarioController {
  	}
 	
 	@PutMapping("/usuarios/{idUsuario}")
-	public ResponseEntity<Object> update(@RequestBody Usuario usuarios, @PathVariable String idUsuario){
+	public ResponseEntity<Object> update(@RequestBody Usuario usuarios, @PathVariable Integer idUsuario){
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			
@@ -98,7 +98,7 @@ public class UsuarioController {
 	}
 	
 	@DeleteMapping("/usuarios/{idUsuario}")
-	public ResponseEntity<Object> deleteUser(@PathVariable String idUsuario){
+	public ResponseEntity<Object> deleteUser(@PathVariable Integer idUsuario){
 		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			Usuario currentUsuario = usuarioService.findById(idUsuario);

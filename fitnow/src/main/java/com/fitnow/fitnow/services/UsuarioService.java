@@ -10,7 +10,7 @@ public interface UsuarioService {
 	
 	public Usuario save(Usuario usuario);
 	
-	public Usuario findById(String idUsuario);
+	public Usuario findById(Integer idUsuario);
 	
 	public void delete(Usuario usuario);
 

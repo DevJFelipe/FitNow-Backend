@@ -9,7 +9,10 @@ import org.springframework.data.annotation.CreatedDate;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
@@ -23,8 +26,9 @@ public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_usuario")
-    private String idUsuario;
+    private Integer idUsuario;
 
     @NotBlank
     @Column(name = "nombre_completo")
@@ -67,12 +71,15 @@ public class Usuario implements Serializable {
     @ElementCollection
     @Column(name = "objetivo")
     private List<String> objetivos;
+    
+    @JoinColumn(name = "id_rutina")    
+    private Rutina rutina;
    
-	public String getIdUsuario() {
+	public Integer getIdUsuario() {
 		return idUsuario;
 	}
 
-	public void setIdUsuario(String idUsuario) {
+	public void setIdUsuario(Integer idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 

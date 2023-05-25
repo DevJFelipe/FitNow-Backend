@@ -30,7 +30,7 @@ public class UsuarioServiceImplement implements UsuarioService{
 
 	@Override
 	@Transactional
-	public Usuario findById(String idUsuario){
+	public Usuario findById(Integer idUsuario){
 		return usuarioDao.findById(idUsuario).orElse(null);
 	}
 
