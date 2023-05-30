@@ -14,7 +14,7 @@
 	<name>fitnow</name>
 	<description>Aplicación web para crear rutinas personalizadas de ejercicio con IA</description>
 	<properties>
-		<java.version>20</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
