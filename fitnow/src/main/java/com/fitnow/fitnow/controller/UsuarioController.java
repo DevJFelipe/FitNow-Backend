@@ -78,14 +78,14 @@ public class UsuarioController {
 			currentUsuario.setFechaNacimiento(usuarios.getFechaNacimiento());
 			currentUsuario.setGenero(usuarios.getGenero());
 			currentUsuario.setCorreoElectronico(usuarios.getCorreoElectronico());
+			currentUsuario.setContrasena(usuarios.getContrasena());
 			currentUsuario.setAlturaCm(usuarios.getAlturaCm());
 			currentUsuario.setPesoKg(usuarios.getPesoKg());
 			currentUsuario.setNivelActividad(usuarios.getNivelActividad());
 			currentUsuario.setFechaRegistro(usuarios.getFechaRegistro());
 			currentUsuario.setEdad(usuarios.getEdad());
-			currentUsuario.setContrasena(usuarios.getContrasena());
-			//currentUsuario.setObjetivos(usuario.getObjetivos());
-			
+			currentUsuario.setLugarEntrenamiento(usuarios.getLugarEntrenamiento());
+			currentUsuario.setObjetivos(usuarios.getObjetivos());
 			
 			Usuario res = usuarioService.save(usuarios);
 			
